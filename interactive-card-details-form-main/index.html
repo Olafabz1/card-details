@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="atm.css">
+  <title>Interactive card details form</title>  
+</head>
+<body>
+  <header>
+    <img src="./images/bg-main-mobile.png" alt="bg" class="background">
+  </header>
+  <!--firstcard starts-->
+      <div class="backcard">
+        <img src="./images/bg-card-back.png" alt="back" class="back">
+        <p>000</p>
+      </div>
+
+<!--secondcard starts-->
+<div class="frontcard">
+    <img src="./images/bg-card-front.png" alt="front" class="front">
+</div>
+    <div class="cards">
+        <div class="sign">
+          <div class="signcircle"></div>
+          <div class="signround"></div>
+        </div>
+        <div class="digits">
+          0000 0000 0000 0000
+        </div>
+        <div class="name">
+        <p>JANE APPLESEED</p>
+        <p>00/00</p> 
+        </div>
+    </div>
+  </div>
+  <!--End of the card section-->
+
+  <!--Beginning of the card form-->
+  <form action="" onsubmit="return validateForm()" method="POST">
+    <label for="cardholder">CARDHOLDER NAME</label>
+    <br>
+    <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed">
+    <div id="nameError" class="error"></div>
+
+    <label for="cardnumber"><br>CARD NUMBER</label>
+    <br>
+    <input type="text" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000">
+    <div id="numberError" class="error"></div>
+
+    <div class="card-details">
+      <div>
+        <label for="date">EXP.DATE</label>
+        <br>
+        <input type="text" name="date" id="dates" placeholder="MM">
+        <div id="datesError" class="error"></div>
+      </div>
+
+      <div>
+        <label for="date">(MM/YY)</label>
+        <br>
+        <input type="text" name="date" id="date" placeholder="YY">
+        <div id="dateError" class="error"></div>
+      </div>
+
+      <div>
+        <label for="date">CVC</label>
+        <br>
+        <input type="text" name="date" id="dates"  placeholder="e.g. 123">
+        <div id="datesError" class="error"></div>
+      </div>
+  </div>
+
+    <button type="submit">Confirm</button>
+  </form>
+
+  <!-- Completed state start -->
+
+  <div id="completed">
+    <div id="completedError" class="Error"></div>
+  Thank you!
+  We've added your card details
+  Continue
+  </div>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
